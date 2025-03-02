@@ -2,7 +2,7 @@
 
 Stuck on what to cook with the ingredients you have? Let **Chef Hugging Face** help! Simply provide your list of ingredients, and our chef will suggest delicious recipes tailored to what you’ve got in your kitchen. Whether it's breakfast, lunch, or dinner, we’ve got you covered with the perfect meal ideas!
 
-[Ask Chef Hugging Face Yourself](https://chef-claude-smoky.vercel.app/)
+[Ask Chef Hugging Face Yourself](https://chef-hugging-face.vercel.app/)
 
 
 # Local Setup Steps
