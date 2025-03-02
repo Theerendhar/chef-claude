@@ -1,5 +1,5 @@
 
-import CHEF_CLAUDE_ICON from '/src/assets/Claude-Icon.png'
+import Hugging_Face_Icon from '/src/assets/Hugging-Face-Icon.png'
 import './Header.css'
 
 function Header() {
@@ -7,8 +7,8 @@ function Header() {
     return (
         <>
             <header className='header'>
-                <img src={CHEF_CLAUDE_ICON} alt='Chef Logo' />
-                <h1>Chef Claude</h1>
+                <img src={Hugging_Face_Icon} alt='Chef Logo' />
+                <h1>Chef Hugging Face</h1>
             </header>
         </>
     )

@@ -1,13 +1,17 @@
 import { useState } from 'react';
+
 import IngredientForm from '../../components/IngredientForm/IngredientForm';
 import IngridentList from '../../components/IngredientList/IngredientList';
 import GenerateRecipe from '../../components/GenerateRecipe/GenerateRecipe';
+import RecipeSection from '../../components/RecipeSection/RecipeSection';
+
+import { getRecipeFromMistral } from '../../huggingFace';
 import './BodyContainer.css';
 
 function BodyContainer() {
 
     const [ingridentArray, setIngridentArray] = useState([]);
-    const [recipeShown, setRecipeShown] = useState(false);
+    const [recipe, setRecipe] = useState('');
 
     function addIngrident(formData) {
         const inputElemnt = document.getElementById('ingredients');
@@ -24,9 +28,12 @@ function BodyContainer() {
 
     }
 
-    function getRecipe() {
-        setRecipeShown(prevState => !prevState);
-        console.log(recipeShown);
+    async function getRecipe() {
+        
+        const response = await getRecipeFromMistral(ingridentArray);
+        console.log('AI Response: ', response)
+        
+        setRecipe(response);
     }
 
     return (
@@ -45,7 +52,7 @@ function BodyContainer() {
                         onClick={getRecipe}
                     />
                 }
-                {recipeShown && <h1>Recipe Shown</h1>}
+                {recipe && <RecipeSection recipe={recipe} />}
             </main>
         </>
     )
