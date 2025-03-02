@@ -1,0 +1,30 @@
+.ingredient-list-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin: 20px 10px 30px;
+}
+
+.ingredient-list-section > h2{
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #141413;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.ingredient-list {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.ingredient-list > li{
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 28px;
+  color: #475467;
+  padding: 10px;
+  text-align: left;
+}
